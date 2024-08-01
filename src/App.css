@@ -1,0 +1,69 @@
+/* General Styling for the App */
+.App {
+  text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Header and Main Content Styling */
+.App-header {
+  padding: 2rem;
+}
+
+/* Dashboard Styling */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-container h1 {
+  margin-bottom: 1rem;
+}
+
+.crypto-list {
+  width: 100%;
+  max-width: 800px;
+}
+.main-content {
+  margin-left: 250px; /* Same width as the sidebar */
+  padding: 20px;
+}
+button {
+  width: 100%;
+  padding: 8px; /* Reduced padding for a smaller button */
+  font-size: 14px; /* Reduced font size for a smaller button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,34 @@
+/* Dashboard.css */
+.container {
+    padding: 20px;
+  }
+  
+  .crypto-details {
+    margin-top: 20px;
+  }
+  
+  .chart-container {
+    margin-top: 20px;
+  }
+  
+  .loading-spinner {
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+  }
+  
