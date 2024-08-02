@@ -67,8 +67,8 @@ const CryptoList = () => {
         setError('No historical data available.');
       }
     } catch (error) {
-      console.error('Error fetching historical data:', error.response ? error.response.data : error.message);
-      setError('Failed to fetch historical data.');
+      console.error(`Error fetching historical data for ${cryptoId}:`, error.response ? error.response.data : error.message);
+      setError(`Failed to fetch historical data for ${cryptoId}.`);
     }
   };
 
@@ -174,3 +174,4 @@ const CryptoList = () => {
 };
 
 export default CryptoList;
+
