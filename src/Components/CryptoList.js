@@ -28,11 +28,16 @@ const CryptoList = () => {
             sparkline: false,
           },
         });
-        setCryptos(response.data);
-        setError(null);
+        const fetchedCryptos = response.data.slice(0, 10);
+        if (fetchedCryptos.length >= 8) {
+          setCryptos(fetchedCryptos);
+          setError(null);
+        } else {
+          throw new Error('Fetched less than 8 cryptocurrencies.');
+        }
       } catch (error) {
         console.error('Error fetching cryptocurrency data:', error.response ? error.response.data : error.message);
-        setError('Failed to fetch cryptocurrency data.');
+        setError('Failed to fetch at least 8 cryptocurrencies. Please try again later.');
       } finally {
         setLoading(false);
       }
@@ -169,4 +174,3 @@ const CryptoList = () => {
 };
 
 export default CryptoList;
-
