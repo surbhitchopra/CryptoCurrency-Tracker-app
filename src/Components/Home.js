@@ -34,15 +34,20 @@ const Home = () => {
           <h1>Welcome to CryptoCurrency Tracker</h1>
           <p>Track your favourite cryptocurrencies in real-time.</p>
           <div className="button-group">
-            <button className="explore-button" onClick={handleExplore}>
+            <button className="radiant-button" onClick={handleExplore}>
               Explore Now
             </button>
             {!loggedIn && (
-              <button className="login-button" onClick={() => navigate('/login')}>
+              <button className="radiant-button" onClick={() => navigate('/login')}>
                 Login
               </button>
             )}
           </div>
+        </div>
+      </div>
+      <div className="fit-banner">
+        <div className="fit-banner-content">
+          
         </div>
       </div>
     </div>
@@ -50,6 +55,4 @@ const Home = () => {
 };
 
 export default Home;
-
-
 

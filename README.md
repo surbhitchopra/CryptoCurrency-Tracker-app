@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+## Cryptocurrency Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
 
-## Available Scripts
+Cryptocurrency Tracker is a web application designed to provide real-time tracking and historical analysis of cryptocurrencies. The application allows users to view the current prices of top cryptocurrencies, analyze their historical price data through interactive charts, and monitor price changes over different time periods.
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+- Real-Time Cryptocurrency Prices: Display current prices of the top cryptocurrencies.
+- Historical Data Analysis: View historical price charts for selected cryptocurrencies.
+- Interactive Charts: Analyze historical price trends with interactive Line charts.
+- Refresh Data: Automatic data refresh every minute to keep information up-to-date values changes after 24 hours
+- Responsive Design: Accessible and usable on both desktop and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Frontend: React.js
+- Charting Library: Chart.js
+- Backend API: CoinGecko API (for real-time and historical cryptocurrency data)
+- Styling: Bootstrap and CSS (for styling and layout)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Usage
+1.	View Cryptocurrency Prices: Navigate to the Dashboard page by login to see the list of top cryptocurrencies with their current prices, market caps, and 24-hour changes.
+2.	Analyze Historical Data: Click on a cryptocurrency to view its historical price data. You can switch between different time periods (e.g., 7 days, 30 days, 90 days, 1 year) to see the historical price trends.
+3.	Interactive Charts: Use the Line charts to visually analyze price changes over the selected time period.
+4.	Also designed navtab (Home, Dashboard , About and contact)
+API Integration
+The application uses the CoinGecko API for retrieving real-time and historical cryptocurrency data. The API endpoints used include:
+•	Current Market Data: https://api.coingecko.com/api/v3/coins/markets
+•	Historical Market Data: https://api.coingecko.com/api/v3/coins/{id}/market_chart

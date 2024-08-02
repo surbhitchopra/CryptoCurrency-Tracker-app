@@ -1,80 +1,80 @@
-/* Home.css */
-
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
   }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
   }
-  
-  .home-container {
-    text-align: center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
   }
-  
-  .banner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #282c34;
-    color: white;
-    padding: 20px;
+  to {
+    transform: translateY(0);
   }
-  
-  .banner-content {
-    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
   }
-  
-  .banner-content h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-    animation: slideIn 1.5s ease-in-out;
-    color: yellow; /* Change the color of the welcome message */
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .banner-content p {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    animation: slideIn 2s ease-in-out;
-  }
-  
-  .button-group {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .explore-button, .login-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .explore-button:hover, .login-button:hover {
-    background-color: blue;
-  }
-  
-  .explore-button {
-    background-color: blue;
-    color: #282c34;
-  }
-  
-  .login-button {
-    background-color: blue;
-    color: #61dafb;
-    border: 2px solid #61dafb;
-  }
-  
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.banner-content {
+  max-width: 800px;
+  margin: auto;
+  animation: zoomIn 1s ease-out;
+}
+
+.button-group {
+  margin-top: 30px;
+}
+
+.radiant-button {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.radiant-button:hover {
+  background-color: #ff3b2e;
+}
+
+.fit-banner {
+  background: url('https://img.freepik.com/free-psd/3d-cryptocurrency-icon-bitcoin-illustration_629802-4.jpg?t=st=1722568369~exp=1722571969~hmac=9f1d3004075b0b0499ebbf6e07113bb275908ccc515f833c559106aa70cc2d39&w=740') no-repeat center center;
+  background-size: cover;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100vh; /* Ensure the banner covers the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in;
+}
+
+.fit-banner-content {
+  max-width: 800px;
+  margin: auto;
+  animation: zoomIn 1s ease-out;
+}

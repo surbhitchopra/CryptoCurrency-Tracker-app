@@ -15,6 +15,7 @@ const Login: React.FC<{ setLoggedIn: React.Dispatch<React.SetStateAction<boolean
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
   const [showCredentials, setShowCredentials] = useState(false); // State to show credentials info
+  const [loginAttempted, setLoginAttempted] = useState(false); // Track login attempt
   const navigate = useNavigate();
 
   const validateEmail = (email: string) => {
@@ -28,6 +29,7 @@ const Login: React.FC<{ setLoggedIn: React.Dispatch<React.SetStateAction<boolean
     setError('');
     setSuccess(false);
     setIsLoading(true);
+    setLoginAttempted(true); // Mark login attempt
 
     if (!validateEmail(username)) {
       setError('Please enter a valid Gmail address');
@@ -82,20 +84,33 @@ const Login: React.FC<{ setLoggedIn: React.Dispatch<React.SetStateAction<boolean
         <button type="submit" disabled={isLoading}>
           {isLoading ? 'Loading...' : 'Login'}
         </button>
-        {showCredentials && (
-          <div className="credentials-info">
-            <p><strong>Example credentials:</strong></p>
-            <p>Email: user1@gmail.com</p>
-            <p>Password: 123456</p>
-            <p>Email: user2@gmail.com</p>
-            <p>Password: 766816</p>
-          </div>
-        )}
       </form>
+<p>
+Credentials Information:
+<p>Email: user1@gmail.com</p>
+          <p>Password: 123456</p>
+          <p>Email: user2@gmail.com</p>
+          <p>Password: 766816</p>
+          <p> enter any of these credentials  given above  ,others will show error </p>
+</p>
+
+      {/* Render credentials info on a white page after login button */}
+      {loginAttempted && (
+        <div className="credentials-info">
+          <h3>Credentials Information:</h3>
+          <p><strong>Example credentials:</strong></p>
+          <p>Email: user1@gmail.com</p>
+          <p>Password: 123456</p>
+          <p>Email: user2@gmail.com</p>
+          <p>Password: 766816</p>
+          <p> enter any of these credentials  given above  ,others will show error </p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Login;
+
 
 

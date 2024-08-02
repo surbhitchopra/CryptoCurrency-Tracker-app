@@ -31,7 +31,7 @@ const CryptoList = () => {
         setCryptos(response.data);
         setError(null);
       } catch (error) {
-        console.error('Error fetching cryptocurrency data:', error);
+        console.error('Error fetching cryptocurrency data:', error.response ? error.response.data : error.message);
         setError('Failed to fetch cryptocurrency data.');
       } finally {
         setLoading(false);
@@ -62,7 +62,7 @@ const CryptoList = () => {
         setError('No historical data available.');
       }
     } catch (error) {
-      console.error('Error fetching historical data:', error);
+      console.error('Error fetching historical data:', error.response ? error.response.data : error.message);
       setError('Failed to fetch historical data.');
     }
   };

@@ -6,7 +6,7 @@ const Dashboard = () => {
     <div>
       <h1>Dashboard</h1>
       <p style={{ color: 'grey', fontSize: '1em' }}>
-        Click on a cryptocurrency to see its historical data.
+        Click on a cryptocurrency name to see its historical data and charts.
       </p>
       <CryptoList />
     </div>
